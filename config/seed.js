@@ -69,26 +69,31 @@ const locations = [
 
 const owners = [
   {
+    name: 'Johnson Smith',
     city: 'Atlanta',
     aboutMe: 'Bringing the taste of traditional Roman dishes to the heart of the city!',
     favoriteDish: 'Saltimbocca',
   },
   {
+    name: 'Bob Brown',
     city: 'New York',
     aboutMe: 'Capturing the essence of Venetian cuisine with every dish!',
     favoriteDish: 'Baccalà Mantecato',
   },
   {
+    name: 'Jon Jones',
     city: 'North Carolina',
     aboutMe: 'Crafting Milanese classics with a modern twist!',
     favoriteDish: 'Risotto ai Funghi Porcini',
   },
   {
+    name: 'Garcia Miller',
     city: 'Houston',
     aboutMe: 'Preserving the culinary heritage of Florence one plate at a time!',
     favoriteDish: 'Pizza Margherita',
   },
   {
+    name: 'Davis Rodriguez',
     city: 'Los Angeles',
     aboutMe: 'Bringing the flavors of Naples straight to your table!',
     favoriteDish: 'Penne alla Carbonara',

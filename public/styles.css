@@ -1,4 +1,24 @@
 body {
     background-color: black;
     color: white;
+    font-size: 25px;
+    background-image: url(./chefBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
+
+body > p {
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(180, 120, 0);
+    border: 20px rgba(0, 0, 0, 0.904) solid;
+    padding: 10px;
+}
+

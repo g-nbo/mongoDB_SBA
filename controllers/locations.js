@@ -4,7 +4,8 @@ module.exports = {
   createLocation,
   getLocations,
   updateLocation,
-  deleteLocation
+  deleteLocation,
+  displayLocations
 };
 
 
@@ -46,12 +47,22 @@ async function updateLocation(req, res) {
 // DELETE (DELETE)
 async function deleteLocation(req, res) {
   try {
-    await Owner.findByIdAndDelete(req.params.id);
+    await Location.findByIdAndDelete(req.params.id);
 
     res.status(200).json({
       message: 'Successfully Deleted the User',
     });
   } catch (err) {
     res.status(400).send(err);
+  }
+}
+
+async function displayLocations(req, res) {
+  try {
+    const locations = await Location.find({});
+
+    res.render("locations.ejs", { locations })
+  } catch (err) {
+    res.status(400).json(err);
   }
 }

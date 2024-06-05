@@ -14,6 +14,8 @@ const locationRouter = require('./routes/locations.js')
 // Configuring the server to accept and parse JSON data.
 app.use(express.json());
 
+app.set("view engine", "ejs");
+
 const path = require('path')
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
@@ -31,7 +33,7 @@ app.use('/owners', ownerRouter);
 app.use('/locations', locationRouter);
 
 app.get('/', (req, res) => {
-  res.send("Base")
+  res.render("base")
 })
 
 // Error Handling Middlware

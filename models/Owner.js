@@ -1,6 +1,11 @@
 const { Schema, model } = require('../config/db-connection');
 
 const ownerSchema = Schema({
+  name: {
+    type: String,
+    require: true,
+    unqiue: true
+  },
   city: {
     type: String,
     require: true,

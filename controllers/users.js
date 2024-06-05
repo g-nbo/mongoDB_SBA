@@ -4,7 +4,8 @@ module.exports = {
   createUser,
   getUsers,
   updateUser,
-  deleteUser
+  deleteUser,
+  displayUsers
 };
 
 
@@ -56,4 +57,14 @@ async function deleteUser(req, res) {
   }
 }
 
+// DISPLAY
 
+async function displayUsers(req, res) {
+  try {
+    const users = await User.find({});
+
+    res.render("users", { users })
+  } catch (err) {
+    res.status(400).json(err);
+  }
+}

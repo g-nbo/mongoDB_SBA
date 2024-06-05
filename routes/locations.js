@@ -7,6 +7,8 @@ router.post('/', locationsCtrl.createLocation);
 
 router.get('/', locationsCtrl.getLocations);
 
+router.get('/display', locationsCtrl.displayLocations)
+
 router.patch('/:id', locationsCtrl.updateLocation);
 
 router.delete('/:id', locationsCtrl.deleteLocation);

@@ -7,6 +7,8 @@ router.post('/', ownersCtrl.createOwner);
 
 router.get('/', ownersCtrl.getOwners);
 
+router.get('/display', ownersCtrl.displayOwners)
+
 router.patch('/:id', ownersCtrl.updateOwner);
 
 router.delete('/:id', ownersCtrl.deleteOwner);

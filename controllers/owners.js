@@ -4,7 +4,8 @@ module.exports = {
   createOwner,
   getOwners,
   updateOwner,
-  deleteOwner
+  deleteOwner,
+  displayOwners
 };
 
 
@@ -53,5 +54,17 @@ async function deleteOwner(req, res) {
     });
   } catch (err) {
     res.status(400).send(err);
+  }
+}
+
+// DISPLAY
+
+async function displayOwners(req, res) {
+  try {
+    const owners = await Owner.find({});
+
+    res.render("owners", { owners })
+  } catch (err) {
+    res.status(400).json(err);
   }
 }
