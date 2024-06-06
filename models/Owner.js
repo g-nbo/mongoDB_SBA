@@ -23,3 +23,4 @@ const ownerSchema = Schema({
 });
 
 module.exports = model('Owners', ownerSchema);
+ownerSchema.index({ city: 1, type: 1 });

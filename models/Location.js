@@ -18,3 +18,4 @@ const locationSchema = Schema({
 });
 
 module.exports = model('Locations', locationSchema);
+locationSchema.index({ city: 1, type: 1 });

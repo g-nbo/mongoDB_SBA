@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messages</title>
+    <title>Users</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 
@@ -12,17 +12,17 @@
     <h1>Users</h1>
 
     <div class="container">
-    <p>
-        <% users.forEach((u)=> { %>
-            <%= "Email: " + u.email %> <br>
-            <%= "Password: " + u.password %> <br>
-            <%= "Age: " + u.age %> <br>
+        <p>
+            <% users.forEach((u)=> { %>
+                <%= "Email: " + u.email %> <br>
+                    <%= "Password: " + u.password %> <br>
+                        <%= "Age: " + u.age %> <br>
 
-                <br /> <br />
-                <% }) %>
+                            <br /> <br />
+                            <% }) %>
 
-    </p>
-</div>
+        </p>
+    </div>
 
 </body>
 
